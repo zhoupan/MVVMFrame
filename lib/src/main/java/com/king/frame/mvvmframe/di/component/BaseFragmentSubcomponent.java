@@ -1,9 +1,10 @@
 package com.king.frame.mvvmframe.di.component;
 
+import androidx.databinding.ViewDataBinding;
+
 import com.king.frame.mvvmframe.base.BaseFragment;
 import com.king.frame.mvvmframe.base.BaseViewModel;
 
-import androidx.databinding.ViewDataBinding;
 import dagger.Subcomponent;
 import dagger.android.AndroidInjectionModule;
 import dagger.android.AndroidInjector;
@@ -14,9 +15,9 @@ import dagger.android.AndroidInjector;
 @Subcomponent(modules = {AndroidInjectionModule.class})
 public interface BaseFragmentSubcomponent extends AndroidInjector<BaseFragment<BaseViewModel, ViewDataBinding>> {
 
-    @Subcomponent.Factory
-    interface Factory extends AndroidInjector.Factory<BaseFragment<BaseViewModel, ViewDataBinding>> {
+ @Subcomponent.Factory
+ interface Factory extends AndroidInjector.Factory<BaseFragment<BaseViewModel, ViewDataBinding>> {
 
-    }
+ }
 
 }

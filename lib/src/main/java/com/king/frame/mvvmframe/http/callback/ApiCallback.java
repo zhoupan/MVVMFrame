@@ -9,20 +9,20 @@ import timber.log.Timber;
  * @author <a href="mailto:jenly1314@gmail.com">Jenly</a>
  */
 public abstract class ApiCallback<T> implements Callback<T> {
-    @Override
-    public void onResponse(Call<T> call, Response<T> response) {
-        T result = response.body();
-        Timber.d("Response:" + result);
-        onResponse(call,result);
-    }
+ @Override
+ public void onResponse(Call<T> call, Response<T> response) {
+  T result = response.body();
+  Timber.d("Response:" + result);
+  onResponse(call, result);
+ }
 
-    @Override
-    public void onFailure(Call<T> call, Throwable t) {
-        Timber.w(t);
-        onError(call,t);
-    }
+ @Override
+ public void onFailure(Call<T> call, Throwable t) {
+  Timber.w(t);
+  onError(call, t);
+ }
 
-    public abstract void onResponse(Call<T> call,T result);
+ public abstract void onResponse(Call<T> call, T result);
 
-    public abstract void onError(Call<T> call, Throwable t);
+ public abstract void onError(Call<T> call, Throwable t);
 }

@@ -7,9 +7,10 @@ import dagger.Module;
 
 /**
  * Application模块：为{@link ApplicationComponent}提供注入的各个模块
+ *
  * @author <a href="mailto:jenly1314@gmail.com">Jenly</a>
  */
-@Module(includes = {ViewModelFactoryModule.class,ViewModelModule.class,ActivityModule.class})
+@Module(includes = {ViewModelFactoryModule.class, ViewModelModule.class, ActivityModule.class})
 public class ApplicationModule {
 
 }

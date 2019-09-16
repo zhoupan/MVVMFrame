@@ -18,21 +18,21 @@ import java.util.List;
  * @author <a href="mailto:jenly1314@gmail.com">Jenly</a>
  */
 public class SearchHistoryAdapter extends TagAdapter<SearchHistory> {
-    private Context mContext;
-    private LayoutInflater mInflater;
+ private Context mContext;
+ private LayoutInflater mInflater;
 
-    public SearchHistoryAdapter(Context context, List<SearchHistory> datas) {
-        super(datas);
-        this.mContext = context;
-        mInflater = LayoutInflater.from(context);
-    }
+ public SearchHistoryAdapter(Context context, List<SearchHistory> datas) {
+  super(datas);
+  this.mContext = context;
+  mInflater = LayoutInflater.from(context);
+ }
 
-    @Override
-    public View getView(FlowLayout parent, int position, SearchHistory data) {
-        TextView tv = (TextView) mInflater.inflate(R.layout.search_history_item,parent,false);
-        tv.setText(data.getName());
-        tv.setTextColor(RandomUtils.INSTANCE.randomColor(Constants.COLOR_RGB_MIN,Constants.COLOR_RGB_MAX));
-        return tv;
-    }
+ @Override
+ public View getView(FlowLayout parent, int position, SearchHistory data) {
+  TextView tv = (TextView) mInflater.inflate(R.layout.search_history_item, parent, false);
+  tv.setText(data.getName());
+  tv.setTextColor(RandomUtils.INSTANCE.randomColor(Constants.COLOR_RGB_MIN, Constants.COLOR_RGB_MAX));
+  return tv;
+ }
 
 }

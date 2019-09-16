@@ -19,20 +19,20 @@ import dagger.Component;
 @Component(modules = {AppModule.class})
 public interface AppComponent {
 
-    void inject(ApplicationDelegate applicationDelegate);
+ void inject(ApplicationDelegate applicationDelegate);
 
-    Application getApplication();
+ Application getApplication();
 
-    IDataRepository getDataRepository();
+ IDataRepository getDataRepository();
 
-    @Component.Builder
-    interface Builder{
-        @BindsInstance
-        Builder application(Application application);
+ @Component.Builder
+ interface Builder {
+  @BindsInstance
+  Builder application(Application application);
 
-        Builder configModule(ConfigModule configModule);
+  Builder configModule(ConfigModule configModule);
 
-        AppComponent build();
-    }
+  AppComponent build();
+ }
 
 }

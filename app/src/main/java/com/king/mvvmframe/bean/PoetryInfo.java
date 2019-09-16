@@ -10,79 +10,78 @@ import android.os.Parcelable;
 public class PoetryInfo implements Parcelable {
 
 
-    /**
-     * title : 幽居
-     * content : 小舫藤为缆，幽居竹织门。|短篱围藕荡，细路入桑村。|鱼脍槎头美，醅倾粥面浑。|残年谢轩冕，犹足号黎元。
-     * author : 陆游
-     */
+ public static final Creator<PoetryInfo> CREATOR = new Creator<PoetryInfo>() {
+  @Override
+  public PoetryInfo createFromParcel(Parcel source) {
+   return new PoetryInfo(source);
+  }
 
-    private String title;
-    private String content;
-    private String author;
+  @Override
+  public PoetryInfo[] newArray(int size) {
+   return new PoetryInfo[size];
+  }
+ };
+ /**
+  * title : 幽居
+  * content : 小舫藤为缆，幽居竹织门。|短篱围藕荡，细路入桑村。|鱼脍槎头美，醅倾粥面浑。|残年谢轩冕，犹足号黎元。
+  * author : 陆游
+  */
 
-    public String getTitle() {
-        return title;
-    }
+ private String title;
+ private String content;
+ private String author;
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
+ public PoetryInfo() {
+ }
 
-    public String getContent() {
-        return content;
-    }
+ protected PoetryInfo(Parcel in) {
+  this.title = in.readString();
+  this.content = in.readString();
+  this.author = in.readString();
+ }
 
-    public void setContent(String content) {
-        this.content = content;
-    }
+ public String getTitle() {
+  return title;
+ }
 
-    public String getAuthor() {
-        return author;
-    }
+ public void setTitle(String title) {
+  this.title = title;
+ }
 
-    public void setAuthor(String author) {
-        this.author = author;
-    }
+ public String getContent() {
+  return content;
+ }
 
-    @Override
-    public String toString() {
-        return "PoetryInfo{" +
-                "title='" + title + '\'' +
-                ", content='" + content + '\'' +
-                ", author='" + author + '\'' +
-                '}';
-    }
+ public void setContent(String content) {
+  this.content = content;
+ }
 
-    @Override
-    public int describeContents() {
-        return 0;
-    }
+ public String getAuthor() {
+  return author;
+ }
 
-    @Override
-    public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(this.title);
-        dest.writeString(this.content);
-        dest.writeString(this.author);
-    }
+ public void setAuthor(String author) {
+  this.author = author;
+ }
 
-    public PoetryInfo() {
-    }
+ @Override
+ public String toString() {
+  return "PoetryInfo{" +
+   "title='" + title + '\'' +
+   ", content='" + content + '\'' +
+   ", author='" + author + '\'' +
+   '}';
+ }
 
-    protected PoetryInfo(Parcel in) {
-        this.title = in.readString();
-        this.content = in.readString();
-        this.author = in.readString();
-    }
+ @Override
+ public int describeContents() {
+  return 0;
+ }
 
-    public static final Creator<PoetryInfo> CREATOR = new Creator<PoetryInfo>() {
-        @Override
-        public PoetryInfo createFromParcel(Parcel source) {
-            return new PoetryInfo(source);
-        }
-
-        @Override
-        public PoetryInfo[] newArray(int size) {
-            return new PoetryInfo[size];
-        }
-    };
+ @Override
+ public void writeToParcel(Parcel dest, int flags) {
+  dest.writeString(this.title);
+  dest.writeString(this.content);
+  dest.writeString(this.author);
+ }
 }

@@ -9,12 +9,13 @@ import dagger.Component;
 
 /**
  * 依赖框架中的{@link AppComponent}
+ *
  * @author <a href="mailto:jenly1314@gmail.com">Jenly</a>
  */
 @ApplicationScope
-@Component(dependencies = AppComponent.class,modules = {AppModule.class})
+@Component(dependencies = AppComponent.class, modules = {AppModule.class})
 public interface ApplicationComponent {
 
-    void inject(App app);
+ void inject(App app);
 
 }

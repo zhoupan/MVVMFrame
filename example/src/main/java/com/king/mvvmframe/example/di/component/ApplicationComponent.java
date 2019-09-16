@@ -11,8 +11,8 @@ import dagger.Component;
  * @author <a href="mailto:jenly1314@gmail.com">Jenly</a>
  */
 @ApplicationScope
-@Component(dependencies = AppComponent.class,modules = {ApplicationModule.class})
+@Component(dependencies = AppComponent.class, modules = {ApplicationModule.class})
 public interface ApplicationComponent {
 
-    void inject(App app);
+ void inject(App app);
 }

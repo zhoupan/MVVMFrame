@@ -1,51 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools">
-    <data>
-    </data>
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".MainActivity"
-        android:layout_margin="30dp">
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideLine"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.2"/>
-        <Button
-            android:id="@+id/btn1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="推荐诗词（标准示例）"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/guideLine"
-            style="@style/onClick"/>
-        <Button
-            android:id="@+id/btn2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="推荐诗词（精简示例）"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn1"
-            style="@style/onClick"/>
-        <Button
-            android:id="@+id/btn3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="搜索诗词（综合示例）"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn2"
-            style="@style/onClick"/>
+ xmlns:app="http://schemas.android.com/apk/res-auto"
+ xmlns:tools="http://schemas.android.com/tools">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+ <androidx.constraintlayout.widget.ConstraintLayout
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:layout_margin="30dp"
+  tools:context=".MainActivity">
+
+  <Button
+   android:id="@+id/btn1"
+   style="@style/onClick"
+   android:layout_width="match_parent"
+   android:layout_height="wrap_content"
+   android:layout_margin="10dp"
+   android:text="推荐诗词（标准示例）"
+   app:layout_constraintEnd_toEndOf="parent"
+   app:layout_constraintStart_toStartOf="parent"
+   app:layout_constraintTop_toBottomOf="@+id/guideLine" />
+
+  <Button
+   android:id="@+id/btn2"
+   style="@style/onClick"
+   android:layout_width="match_parent"
+   android:layout_height="wrap_content"
+   android:layout_margin="10dp"
+   android:text="推荐诗词（精简示例）"
+   app:layout_constraintEnd_toEndOf="parent"
+   app:layout_constraintStart_toStartOf="parent"
+   app:layout_constraintTop_toBottomOf="@+id/btn1" />
+
+  <Button
+   android:id="@+id/btn3"
+   style="@style/onClick"
+   android:layout_width="match_parent"
+   android:layout_height="wrap_content"
+   android:layout_margin="10dp"
+   android:text="搜索诗词（综合示例）"
+   app:layout_constraintEnd_toEndOf="parent"
+   app:layout_constraintStart_toStartOf="parent"
+   app:layout_constraintTop_toBottomOf="@+id/btn2" />
+
+  <androidx.constraintlayout.widget.Guideline
+   android:id="@+id/guideLine"
+   android:layout_width="match_parent"
+   android:layout_height="wrap_content"
+   android:orientation="horizontal"
+   app:layout_constraintGuide_percent="0.2" />
+
+ </androidx.constraintlayout.widget.ConstraintLayout>
+
+ <data></data>
 
 </layout>
